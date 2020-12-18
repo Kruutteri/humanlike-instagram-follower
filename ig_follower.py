@@ -1,7 +1,5 @@
-#mouseaccuracy.com sivulle aimbot
 import pyautogui,time,win32api,win32con,keyboard,random
 from PIL import ImageGrab
-import pyautogui
 
 seurattu = []
 x = 480
