@@ -30,6 +30,7 @@ while True:
                 pyautogui.moveTo(x+random.randint(5,40),y-random.randint(10,20),1/random.randint(5,10))
         pyautogui.moveTo(x+x_plus,y+y_plus,2/random.randint(1,5))
         win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN,x+x_plus,y+y_plus,0,0)
+        time.sleep(0.1)
         win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP,x+x_plus,y+y_plus,0,0)
         seurattu.append([x,y])
         time.sleep(3)
