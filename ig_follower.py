@@ -23,11 +23,12 @@ while True:
     if screen.getpixel((x-x_min,y-y_min)) == (0,149,246):
         x_plus = random.randint(1,40)
         y_plus = random.randint(5,20)
-        for i in range(random.randint(1,2)):
-            if random.randint(1,10) < 5:  
-                pyautogui.moveTo(x-random.randint(5,40),y-random.randint(10,20),1/random.randint(5,10))
-            else:
-                pyautogui.moveTo(x+random.randint(5,40),y-random.randint(10,20),1/random.randint(5,10))
+        
+        if random.randint(1,10) < 5:  
+            pyautogui.moveTo(x-random.randint(5,40),y-random.randint(10,20),1/random.randint(5,10))
+        else:
+            pyautogui.moveTo(x+random.randint(5,40),y-random.randint(10,20),1/random.randint(5,10))
+            
         pyautogui.moveTo(x+x_plus,y+y_plus,2/random.randint(1,5))
         win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN,x+x_plus,y+y_plus,0,0)
         time.sleep(0.1)
